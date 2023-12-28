@@ -21,7 +21,7 @@ app.post('/checkout', async (req, res) => {
 
   // convert to PROPER FORMAT STRIPE WANTS
   let lineItems = []
-  items.forEach((item) => {
+  items.forEach(item => {
     lineItems.push({
       price: item.id,
       quantity: item.quantity,
@@ -31,8 +31,8 @@ app.post('/checkout', async (req, res) => {
   const session = await stripe.checkout.sessions.create({
     line_items: lineItems,
     mode: 'payment',
-    success_url: 'http://localhost:5173/success',
-    cancel_url: 'http://localhost:5175/cancel',
+    success_url: 'https://soopergames27.com/success',
+    cancel_url: 'https://soopergames27.com/cancel',
   })
 
   res.send(JSON.stringify({ url: session.url }))

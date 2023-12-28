@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
-import stripeLogo from '../../assets/stripeLogo.png'
+// import stripeLogo from '../../assets/stripeLogo.png'
+import stripeLogo from '/assets/stripeLogo.png'
 
 const OrderSummary = ({ cart, checkout }) => {
   const totalItems = cart.items.reduce((acc, curr) => {

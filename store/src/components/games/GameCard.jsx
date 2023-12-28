@@ -14,7 +14,7 @@ const GameCard = ({ game }) => {
       <div className="flex flex-col items-center py-2">
         <img
           className="h-[80%] w-[90%] rounded-md shadow-md shadow-gray-500"
-          src={`/src/assets/products/${game.image}.png`}
+          src={`assets/${game.image}.png`}
         ></img>
       </div>
       <div className="border-2 bg-gray-900 p-1">

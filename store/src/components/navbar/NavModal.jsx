@@ -19,7 +19,7 @@ const NavModal = ({ openModal, onClose, cart }) => {
               <div className="">
                 <img
                   className="h-[50px] w-[65px]"
-                  src={`/src/assets/products/${item.image}.png`}
+                  src={`assets/${item.image}.png`}
                 ></img>
               </div>
               <div className="text-left">

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+// /Users/scottlucas/Desktop/games/store/public/assets/Battletoads.png
 
 const CartCard = ({ cart, game }) => {
   const [checked, setChecked] = useState(false)
@@ -8,7 +9,7 @@ const CartCard = ({ cart, game }) => {
         {' '}
         <img
           className="h-[80px] w-[120px] md:h-[100px] md:w-[150px] rounded-md shadow-md shadow-gray-500"
-          src={`/src/assets/products/${game.image}.png`}
+          src={`assets/${game?.image}.png`}
         ></img>
       </div>
       {/* -------------------------------------------- */}

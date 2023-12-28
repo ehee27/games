@@ -1,10 +1,9 @@
-import { Link } from 'react-router-dom'
-import hero from '../assets/hero-background.jpg'
-import snes from '../assets/SNES.png'
-import capcom from '../assets/capcom.png'
-import konami from '../assets/konami.png'
-import acclaim from '../assets/acclaim.webp'
-import EA from '../assets/EA.png'
+import hero from '/assets/hero-background.jpg'
+import snes from '/assets/SNES.png'
+import capcom from '/assets/capcom.png'
+import konami from '/assets/konami.png'
+import acclaim from '/assets/acclaim.webp'
+import EA from '/assets/EA.png'
 
 const logos = [
   { name: konami, alt: 'konami-logo' },
