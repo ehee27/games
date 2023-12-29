@@ -7,7 +7,7 @@ const NavModal = ({ openModal, onClose, cart }) => {
     <div
       className={`fixed top-10 right-10 flex flex-col transition-colors ? ${
         openModal
-          ? 'visible bg-black/90 text-white rounded-lg shadow-lg shadow-black py-5 px-3'
+          ? 'visible bg-black/90 text-white rounded-lg shadow-lg shadow-black py-5 px-3 w-8/12 md:w-4/12'
           : 'invisible'
       }`}
     >
@@ -23,9 +23,16 @@ const NavModal = ({ openModal, onClose, cart }) => {
                 ></img>
               </div>
               <div className="text-left">
-                <p className="text-md text-primary font-Teko">{item.title}</p>
+                <p className="text-lg md:text-xl lg:text-2xl text-primary font-Teko">
+                  {item.title}
+                </p>
                 <p className="text-xs">${item.price}</p>
-                <p className="text-xs">Qty: {item.quantity}</p>
+                <p className="text-xs">
+                  Qty:{' '}
+                  <span className="text-primary font-extrabold">
+                    {item.quantity}
+                  </span>
+                </p>
               </div>
             </div>
           )

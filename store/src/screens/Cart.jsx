@@ -8,7 +8,7 @@ const Cart = () => {
   console.log(cart.items)
 
   const checkout = async () => {
-    await fetch('http://localhost:4000/checkout', {
+    await fetch('https://soopergames-api.onrender.com/checkout', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -25,7 +25,7 @@ const Cart = () => {
       })
   }
   return (
-    <div className=" min-h-screen">
+    <div className="bg-gray-200 min-h-screen">
       <div className="grid grid-cols-1 md:grid-cols-3 py-3">
         <div className="col-span-2">
           {' '}
@@ -39,7 +39,7 @@ const Cart = () => {
             </>
           )}
         </div>
-        <div className="bg-gray-100 rounded-lg">
+        <div className="bg-gray-100 rounded-lg mr-2">
           <OrderSummary cart={cart} checkout={checkout} />
         </div>
       </div>
