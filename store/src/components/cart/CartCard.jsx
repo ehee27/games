@@ -1,10 +1,11 @@
 import { useState } from 'react'
-// /Users/scottlucas/Desktop/games/store/public/assets/Battletoads.png
+import { FaArrowAltCircleUp } from 'react-icons/fa'
+import { FaArrowCircleDown } from 'react-icons/fa'
 
 const CartCard = ({ cart, game }) => {
   const [checked, setChecked] = useState(false)
   return (
-    <div className="flex rounded-lg border-2 p-3 mx-2">
+    <div className="flex rounded-lg bg-gray-300 p-3 mx-2 shadow-md shadow-gray-400 my-2">
       <div className="flex justify-center w-[30%]">
         {' '}
         <img
@@ -43,25 +44,32 @@ const CartCard = ({ cart, game }) => {
             )}
           </div>
         </div>
-        <div className="flex flex-col gap-2 w-[50%] py-1 border-l-2 shadow-inner">
+        <div className="flex flex-col gap-2 w-[50%] py-1 border-l-2 shadow-inner shadow-gray-500 bg-white rounded-md">
           <p>Qty:</p>
           <p className="text-3xl text-secondary font-extrabold">
             {game.quantity}
           </p>
 
           <div className="flex gap-4 justify-center items-center">
-            <button
+            {/* <button
               className="border-2 p-2 rounded-lg w-[50px] hover:bg-green-300 transition-all"
               onClick={() => cart.addOneToCart(game)}
             >
               +
-            </button>
-            <button
-              className="border-2 p-2 rounded-lg w-[50px] hover:bg-red-500 transition-all"
+            </button> */}
+            <FaArrowAltCircleUp
+              className="text-3xl text-green-600 transition-all hover:cursor-pointer"
+              onClick={() => cart.addOneToCart(game)}
+            />
+            <FaArrowCircleDown
+              className="text-3xl bg-transparent transition-all hover:cursor-pointer"
               onClick={() => cart.removeOneFromCart(game)}
+            />
+            {/* <button
+              
             >
               -
-            </button>
+            </button> */}
           </div>
         </div>
         <div className="text-left py-2">

@@ -41,7 +41,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="flex justify-center items-center px-2">
-          <IoLogoGameControllerA className="text-7xl" />
+          <IoLogoGameControllerA className="text-2xl md:text-7xl" />
           <a className="btn btn-ghost text-xl md:text-4xl font-Teko py-1.5">
             SOOPERGAMES
           </a>
@@ -49,12 +49,20 @@ const Navbar = () => {
       </div>
       {/* -------------------------------------- */}
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
+        <ul className="flex gap-4">
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">
+              <button className="btn btn-sm btn-ghost border-2 border-neutral">
+                Home
+              </button>
+            </Link>
           </li>
           <li>
-            <Link to="/store">Store</Link>
+            <Link to="/store">
+              <button className="btn btn-sm btn-ghost border-2 border-neutral">
+                Store
+              </button>
+            </Link>
           </li>
         </ul>
       </div>

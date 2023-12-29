@@ -13,9 +13,6 @@ app.use(express.json())
 app.post('/checkout', async (req, res) => {
   // post request to the checkout API route
 
-  // log the request
-  console.log(req.body)
-
   // items from OUR REQUEST ------------
   const items = req.body.items
 
